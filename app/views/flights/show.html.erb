@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Flight number:</strong>
+  <%= @flight.flight_number %>
+</p>
+
+<p>
+  <strong>Seats taken:</strong>
+  <%= @flight.seats_taken %>
+</p>
+
+<p>
+  <strong>Departure:</strong>
+  <%= @flight.departure %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @flight.destination %>
+</p>
+
+<p>
+  <strong>Depart date:</strong>
+  <%= @flight.depart_date %>
+</p>
+
+<p>
+  <strong>Reservation obj:</strong>
+  <%= @flight.reservation_obj %>
+</p>
+
+<p>
+  <strong>Airplane:</strong>
+  <%= @flight.airplane_id %>
+</p>
+
+<%= link_to 'Edit', edit_flight_path(@flight) %> |
+<%= link_to 'Back', flights_path %>
