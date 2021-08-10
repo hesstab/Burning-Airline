@@ -35,5 +35,12 @@
   <%= @flight.airplane_id %>
 </p>
 
+<p>
+  <strong>Reservations:</strong>
+  <% @flight.reservations.each do |res| %>
+    <a href="/reservations/<%= res.id %>"> <%= res.created_at %> </a>
+<% end %>
+</p>
+
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>

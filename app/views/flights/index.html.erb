@@ -24,7 +24,7 @@
         <td><%= flight.from %></td>
         <td><%= flight.to %></td>
         <td><%= flight.depart_date %></td>
-        <td><%= flight.reservation_obj %></td>
+        <td><%=h truncate( flight.reservation_obj, :length => 10) %></td>
         <td><%= flight.airplane_id %></td>
         <td><%= link_to 'Show', flight %></td>
         <td><%= link_to 'Edit', edit_flight_path(flight) %></td>
