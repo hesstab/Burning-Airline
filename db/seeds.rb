@@ -15,7 +15,7 @@ Reservation.destroy_all
     'Melbourne','Perth','Sydney'
 ]
 
-# FLIGHT NUMBERS 
+# FLIGHT NUMBERS
 @flight_num = [
     'A392','B349','D354','G355','M444','P234',
     'S234','A645','B333','D555','G666','M464',
@@ -49,7 +49,7 @@ u11 = User.create :email => 'toal@test.acc', :name => 'Toal', :password => 'chic
 puts "Seeded #{ User.count } users"
 
 # MAKE PLANES
-p1 = Airplane.create :name => '747 - 1', :capacity => 18 
+p1 = Airplane.create :name => '747 - 1', :capacity => 18
 p2 = Airplane.create :name => '747 - 2', :capacity => 18
 p3 = Airplane.create :name => '747 - 3', :capacity => 18
 p4 = Airplane.create :name => 'a380 - 1', :capacity => 24
@@ -61,18 +61,18 @@ puts "Seeded #{ Airplane.count } planes"
 
 # FLIGHTS - CABIN SEAT ALLOCATION OBJECTS
 @f1_seats = {a1: nil, a2: nil, a3: nil,  a4: nil,  a5: nil,  a6: nil,
-   b1: nil, b2: nil, b3: nil,  b4: nil,  b5: nil,  b6: nil, 
-   c1: nil, c2: nil, c3: nil,  c4: nil,  c5: nil,  c6: nil, 
+   b1: nil, b2: nil, b3: nil,  b4: nil,  b5: nil,  b6: nil,
+   c1: nil, c2: nil, c3: nil,  c4: nil,  c5: nil,  c6: nil,
    d1: nil, d2: nil, d3: nil,  d4: nil,  d5: nil,  d6: nil,}
 
 @f2_seats = {a1: u3.id.to_i, a2: nil, a3: nil,  a4: nil,  a5: nil,  a6: nil,
-   b1: nil, b2: nil, b3: nil,  b4: nil,  b5: nil,  b6: nil, 
-   c1: u4.id.to_i, c2: u5.id.to_i, c3: nil,  c4: nil,  c5: nil,  c6: nil, 
+   b1: nil, b2: nil, b3: nil,  b4: nil,  b5: nil,  b6: nil,
+   c1: u4.id.to_i, c2: u5.id.to_i, c3: nil,  c4: nil,  c5: nil,  c6: nil,
    d1: nil, d2: nil, d3: nil,  d4: u6.id.to_i,  d5: nil,  d6: nil,}
 
 @f3_seats = {a1: nil, a2: nil, a3: nil,  a4: nil,  a5: nil,  a6: nil,
-   b1: nil, b2: u7.id.to_i, b3: nil,  b4: nil,  b5: nil,  b6: nil, 
-   c1: nil, c2: nil, c3: nil,  c4: nil,  c5: nil,  c6: nil, 
+   b1: nil, b2: u7.id.to_i, b3: nil,  b4: nil,  b5: nil,  b6: nil,
+   c1: nil, c2: nil, c3: nil,  c4: nil,  c5: nil,  c6: nil,
    d1: nil, d2: nil, d3: nil,  d4: nil,  d5: nil,  d6: nil,
    e1: nil, e2: nil, e3: nil,  e4: nil,  e5: nil,  e6: nil,}
 
@@ -84,12 +84,12 @@ puts "Seeded #{ Airplane.count } planes"
 # MAKE FLIGHTS AND ASSOCIATED RESERVATIONS
 
 #flight with no reserv
-f1 = Flight.create :flight_number => @flight_num[0], :from => @dest[0], :to => @dest[3], :depart_date => rand_date(), :seats_taken => 0, :reservation_obj => @f1_seats  
+f1 = Flight.create :flight_number => @flight_num[0], :origin => @dest[0], :destination => @dest[3], :depart_date => rand_date(), :seats_taken => 0, :reservation_obj => @f1_seats
 p1.flights << f1
 
 
 #flight with 4 reservations
-f2 = Flight.create :flight_number => @flight_num[3], :from => @dest[3], :to => @dest[0], :depart_date => rand_date(), :seats_taken => 4, :reservation_obj => @f2_seats  
+f2 = Flight.create :flight_number => @flight_num[3], :origin => @dest[3], :destination => @dest[0], :depart_date => rand_date(), :seats_taken => 4, :reservation_obj => @f2_seats
 p2.flights << f2
 
    r1 = Reservation.create :seat_number => 'a1'
@@ -110,7 +110,7 @@ p2.flights << f2
 
 
 #flight with 1 reservation
-f3 = Flight.create :flight_number => @flight_num[2], :from => @dest[2], :to => @dest[5], :depart_date => rand_date(), :seats_taken => 1, :reservation_obj => @f3_seats 
+f3 = Flight.create :flight_number => @flight_num[2], :origin => @dest[2], :destination => @dest[5], :depart_date => rand_date(), :seats_taken => 1, :reservation_obj => @f3_seats
 p4.flights << f3
 
    r5 = Reservation.create :seat_number => 'b2'
@@ -119,7 +119,7 @@ p4.flights << f3
 
 
 #flight that is full with 4 reservations
-f4 = Flight.create :flight_number => @flight_num[1], :from => @dest[1], :to => @dest[4], :depart_date => rand_date(), :seats_taken => 4, :reservation_obj => @f4_seats
+f4 = Flight.create :flight_number => @flight_num[1], :origin => @dest[1], :destination => @dest[4], :depart_date => rand_date(), :seats_taken => 4, :reservation_obj => @f4_seats
 p7.flights << f4
 
    r6 = Reservation.create :seat_number => 'a1'
@@ -143,6 +143,3 @@ puts "Seeded #{ Flight.count } flights"
 puts "Seeded #{ Reservation.count } reservations"
 
 puts "It worked, maybe buy lotto tickets"
-
-
-

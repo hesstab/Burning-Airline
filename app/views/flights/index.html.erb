@@ -21,8 +21,8 @@
       <tr>
         <td><%= flight.flight_number %></td>
         <td><%= flight.seats_taken %></td>
-        <td><%= flight.from %></td>
-        <td><%= flight.to %></td>
+        <td><%= flight.origin %></td>
+        <td><%= flight.destination %></td>
         <td><%= flight.depart_date %></td>
         <td><%=h truncate( flight.reservation_obj, :length => 10) %></td>
         <td><%= flight.airplane_id %></td>
