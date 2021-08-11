@@ -6,18 +6,18 @@ class FlightsController < ApplicationController
     @flights = Flight.all
   end
 
+  # ===================================
+
+  def show_2
+    @flights = Flight.where('origin=? AND destination=?',params[:origin],params[:destination])
+  end
+
+  # ===================================
+
   # GET /flights/1 or /flights/1.json
   def show
   end
 
-  # ===================================
-
-  def show_2
-    flights = Flight.all.where("origin = #{params[:origin]}")
-    raise 'hell'
-  end
-
-  # ===================================
 
   # GET /flights/new
   def new
