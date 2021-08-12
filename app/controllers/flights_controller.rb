@@ -47,7 +47,7 @@ class FlightsController < ApplicationController
   def update
     respond_to do |format|
       if @flight.update(flight_params)
-        format.html { redirect_to @flight, notice: "Flight was successfully updated." }
+        # format.html { redirect_to @flight, notice: "Flight was successfully updated." }
         format.json { render :show, status: :ok, location: @flight }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -73,6 +73,6 @@ class FlightsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def flight_params
-      params.require(:flight).permit(:flight_number, :seats_taken, :origin, :destination, :depart_date, :reservation_obj, :airplane_id)
+      params.require(:flight).permit(:flight_number, :seats_taken, :id, :created_at, :updated_at, :origin, :destination, :depart_date, :reservation_obj, :airplane_id)
     end
 end

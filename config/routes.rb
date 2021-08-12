@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   get '/flights/:origin/:destination' => 'flights#show_2', :as => :view_2
 
-
   resources :reservations
   resources :flights
   resources :airplanes
