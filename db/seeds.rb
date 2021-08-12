@@ -62,13 +62,13 @@ puts "Seeded #{ Airplane.count } planes"
 # FLIGHTS - RESERVATION OBJECTS
 
 
-@f1_seats = '{ a1: null,  a2:"Mai",  a3: null,  a4: null,  a5: null,  a6: null}, { b1: null,  b2: null,  b3: null,  b4: null,  b5: null,  b6: null}, { c1:"Pers",  c2:"Joe",  c3: null,  c4: null,  c5 :"Joel",  c6: null}'
+@f1_seats = '{ "a1": null,  "a2":"Mai",  "a3": null,  "a4": null,  "a5": null,  "a6": null}, { "b1": null,  "b2": null,  "b3": null,  "b4": null,  "b5": null,  "b6": null}, { "c1":"Pers",  "c2":"Joe",  "c3": null,  "c4": null,  "c5" :"Joel",  "c6": null}'
 
-@f2_seats = '{ a1: null,  a2:"Mai",  a3: null,  a4: null,  a5: null,  a6: null}, { b1: null,  b2: null,  b3: null,  b4: null,  b5: null,  b6: null}, { c1:"Pers",  c2:"Joe",  c3: null,  c4: null,  c5 :"Joel",  c6: null}'
+@f2_seats = '{ "a1": null,  "a2":"Mai",  "a3": null,  "a4": null,  "a5": null,  "a6": null}, { "b1": null,  "b2": null,  "b3": null,  "b4": null,  "b5": null,  "b6": null}, { "c1":"Pers",  "c2":"Joe",  "c3": null,  "c4": null,  "c5" :"Joel",  "c6": null}'
 
-@f3_seats = '{ a1: null,  a2:"Mai",  a3: null,  a4: null,  a5: null,  a6: null}, { b1: null,  b2: null,  b3: null,  b4: null,  b5: null,  b6: null}, { c1:"Pers",  c2:"Joe",  c3: null,  c4: null,  c5 :"Joel",  c6: null}'
+@f3_seats = '{ "a1": null,  "a2":"Mai",  "a3": null,  "a4": null,  "a5": null,  "a6": null}, { "b1": null,  "b2": null,  "b3": null,  "b4": null,  "b5": null,  "b6": null}, { "c1":"Pers",  "c2":"Joe",  "c3": null,  "c4": null,  "c5" :"Joel",  "c6": null}'
  
-@f4_seats = '{ a1: null,  a2:"Mai",  a3: null,  a4: null,  a5: null,  a6: null}, { b1: null,  b2: null,  b3: null,  b4: null,  b5: null,  b6: null}, { c1:"Pers",  c2:"Joe",  c3: null,  c4: null,  c5 :"Joel",  c6: null}'
+@f4_seats = '{ "a1": null,  "a2":"Mai",  "a3": null,  "a4": null,  "a5": null,  "a6": null}, { "b1": null,  "b2": null,  "b3": null,  "b4": null,  "b5": null,  "b6": null}, { "c1":"Pers",  "c2":"Joe",  "c3": null,  "c4": null,  "c5" :"Joel",  "c6": null}'
 
 
 
