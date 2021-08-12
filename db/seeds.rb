@@ -82,7 +82,7 @@ puts "Seeded #{ Airplane.count } planes"
    {e1: nil, e2: nil, e3: nil,  e4: nil,  e5: nil,  e6: nil},
 
 ]
-
+ 
 @f4_seats = [{a1: u8.name.to_s, a2: u9.name.to_s},
    {b1: u10.name.to_s, b2: u11.name.to_s}]
 
