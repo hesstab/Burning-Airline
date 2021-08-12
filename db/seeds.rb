@@ -59,25 +59,33 @@ p7 = Airplane.create :name => 'Q400 - 2', :capacity => 4
 puts "Seeded #{ Airplane.count } planes"
 
 
-# FLIGHTS - CABIN SEAT ALLOCATION OBJECTS
-@f1_seats = {a1: nil, a2: nil, a3: nil,  a4: nil,  a5: nil,  a6: nil,
-   b1: nil, b2: nil, b3: nil,  b4: nil,  b5: nil,  b6: nil,
-   c1: nil, c2: nil, c3: nil,  c4: nil,  c5: nil,  c6: nil,
-   d1: nil, d2: nil, d3: nil,  d4: nil,  d5: nil,  d6: nil,}
+# FLIGHTS - RESERVATION OBJECTS
 
-@f2_seats = {a1: u3.id.to_i, a2: nil, a3: nil,  a4: nil,  a5: nil,  a6: nil,
-   b1: nil, b2: nil, b3: nil,  b4: nil,  b5: nil,  b6: nil,
-   c1: u4.id.to_i, c2: u5.id.to_i, c3: nil,  c4: nil,  c5: nil,  c6: nil,
-   d1: nil, d2: nil, d3: nil,  d4: u6.id.to_i,  d5: nil,  d6: nil,}
 
-@f3_seats = {a1: nil, a2: nil, a3: nil,  a4: nil,  a5: nil,  a6: nil,
-   b1: nil, b2: u7.id.to_i, b3: nil,  b4: nil,  b5: nil,  b6: nil,
-   c1: nil, c2: nil, c3: nil,  c4: nil,  c5: nil,  c6: nil,
-   d1: nil, d2: nil, d3: nil,  d4: nil,  d5: nil,  d6: nil,
-   e1: nil, e2: nil, e3: nil,  e4: nil,  e5: nil,  e6: nil,}
+@f1_seats = [
+   {a1: nil, a2: nil, a3: nil,  a4: nil,  a5: nil,  a6: nil},
+   {b1: nil, b2: nil, b3: nil,  b4: nil,  b5: nil,  b6: nil},
+   {c1: nil, c2: nil, c3: nil,  c4: nil,  c5: nil,  c6: nil},
+]
 
-@f4_seats = {a1: u8.id.to_i, a2: u9.id.to_i,
-   b1: u10.id.to_i, b2: u11.id.to_i}
+@f2_seats = [
+   {a1: nil, a2: u3.name.to_s, a3: nil,  a4: nil,  a5: nil,  a6: nil},
+   {b1: nil, b2: nil, b3: nil,  b4: nil,  b5: nil,  b6: nil},
+   {c1: u4.name.to_s, c2: u5.name.to_s, c3: nil,  c4: nil,  c5: u6.name.to_s,  c6: nil},
+]
+
+@f3_seats = [
+   {a1: nil, a2: u3.name.to_s, a3: nil,  a4: nil,  a5: nil,  a6: nil},
+   {b1: nil, b2: u7.name.to_s, b3: nil,  b4: nil,  b5: nil,  b6: nil},
+   {c1: nil, c2: nil, c3: nil,  c4: nil,  c5: nil,  c6: nil},
+   {d1: nil, d2: nil, d3: nil,  d4: nil,  d5: nil,  d6: nil},
+   {e1: nil, e2: nil, e3: nil,  e4: nil,  e5: nil,  e6: nil},
+
+]
+
+@f4_seats = [{a1: u8.name.to_s, a2: u9.name.to_s},
+   {b1: u10.name.to_s, b2: u11.name.to_s}]
+
 
 
 
